@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import StatisticsItem from '../../StatisticsItem/StatisticsItem';
+import StatisticsItem from '../StatisticsItem/StatisticsItem';
 
 class Statistics extends Component {
   static propTypes = {
