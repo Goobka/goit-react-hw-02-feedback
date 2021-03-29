@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import StatisticsItems from './StatisticsItem';
+import shortid from 'shortid';
+import StatisticsItem from '../../StatisticsItem/StatisticsItem';
 
 class Statistics extends Component {
   static propTypes = {
@@ -14,7 +15,7 @@ class Statistics extends Component {
     return (
       <ul>
         {Object.entries(this.props).map(entry =>
-          <StatisticsItems text={entry[0]} value={entry[1]}/>
+          <StatisticsItem key={shortid.generate()} text={entry[0] === 'positivePercentage' ? 'positive feedback' : entry[0]} value={entry[1]}/>
         )}
       </ul>
     )

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 class FeedbackOptions extends Component {
   static propTypes = {
@@ -8,15 +9,14 @@ class FeedbackOptions extends Component {
   }
 
   render() {
-    const { options } = this.props;
-    const {onLeaveFeedback} = this.props;
+    const { options, onLeaveFeedback } = this.props;
     return (
       <>
         {Object.keys(options).map((key) => (
           <button
             type="button"
             name={key}
-            key={key}
+            key={shortid.generate()}
             onClick={onLeaveFeedback}
           >
             {key}

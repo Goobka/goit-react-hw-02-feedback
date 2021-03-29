@@ -12,11 +12,12 @@ class StatisticsItem extends Component {
   }
 
   render() {
-    let { text } = this.props;
-    const { value } = this.props;
+    let { text, value} = this.props;
     text = this.capitalizeFirstLetter(text);
     return (
-      <li>{text}: {value}</li>
+      <li>
+        {text}: {value}{text === 'Positive feedback' ? '%' : ''}
+      </li>
     )
   }
 }

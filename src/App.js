@@ -13,8 +13,8 @@ class App extends Component {
 
   changeHandler = (event) => {
     const name = event.target.name;
-    this.setState((state) => ({
-      [name]: state[name] + 1,
+    this.setState((prevState) => ({
+      [name]: prevState[name] + 1,
     }));
   };
 
