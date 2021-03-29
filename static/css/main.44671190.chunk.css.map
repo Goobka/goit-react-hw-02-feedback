@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/Section/Section.module.css"],"names":[],"mappings":"AAAA,wBACE,iBAAkB,CAClB,YAEF","file":"main.44671190.chunk.css","sourcesContent":[".section {\n  text-align: center;\n  padding: 20px;\n  \n}"]}
