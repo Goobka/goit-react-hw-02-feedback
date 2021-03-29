@@ -1,0 +1,8 @@
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.value {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}

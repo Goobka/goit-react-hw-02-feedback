@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './StatisticsItem.module.css';
 
 class StatisticsItem extends Component {
   static propTypes = {
@@ -15,8 +16,13 @@ class StatisticsItem extends Component {
     let { text, value} = this.props;
     text = this.capitalizeFirstLetter(text);
     return (
-      <li>
-        {text}: {value}{text === 'Positive feedback' ? '%' : ''}
+      <li className={styles.item}>
+        <span>
+          {text}:
+        </span>
+        <span className={styles.value}>
+          {value}{text === 'Positive feedback' ? '%' : ''}
+        </span>
       </li>
     )
   }

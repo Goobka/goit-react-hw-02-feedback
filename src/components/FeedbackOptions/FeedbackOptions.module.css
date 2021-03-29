@@ -1,0 +1,11 @@
+.btn {
+  text-transform: capitalize;
+  padding: 10px;
+  width: 90px;
+  background-color: #fde31d;
+  border: 1px solid #000;
+}
+
+.btn:not(:last-child) {
+  margin-right: 20px;
+}

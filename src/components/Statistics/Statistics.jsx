@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import StatisticsItem from '../StatisticsItem/StatisticsItem';
+import styles from './Statistics.module.css';
 
 class Statistics extends Component {
   static propTypes = {
@@ -13,10 +14,9 @@ class Statistics extends Component {
   }
   render() {
     return (
-      <ul>
-        {Object.entries(this.props).map(entry =>
-          <StatisticsItem key={shortid.generate()} text={entry[0] === 'positivePercentage' ? 'positive feedback' : entry[0]} value={entry[1]}/>
-        )}
+      <ul className={styles.list}>
+        {Object.entries(this.props).map(([key, value]) => (<StatisticsItem key={shortid.generate()} text={key === 'positivePercentage' ? 'positive feedback' : key} value={value} />
+        ))}
       </ul>
     )
   }

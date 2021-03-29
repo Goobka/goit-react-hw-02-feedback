@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './Notification.module.css';
 
 class Notification extends Component {
   static propTypes = {
@@ -9,7 +10,7 @@ class Notification extends Component {
   render() {
     const { msg } = this.props;
     return (
-      <p>{msg}</p>
+      <p className={styles.msg}>{msg}</p>
     )
   }
 }
